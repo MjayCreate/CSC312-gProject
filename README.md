@@ -73,73 +73,54 @@ If successful, your terminal will show:
 
 ---
 
-## 4️⃣ Install Project Requirements
+
+# 🚀 **Quick Start — Clone and Run**
+
+1️⃣ **Clone the repository**
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/MjayCreate/CSC312-gProject/tree/bright
+cd CSC312-gProject
 ```
+
+> Optional: You can also download the ZIP from GitHub and extract it.
 
 ---
 
-## 5️⃣ Set Up MySQL Database
+2️⃣ **Make sure Python and MySQL are installed**
 
-You must have **MySQL Server** + **MySQL Workbench** installed.
+* Python: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+* MySQL Server + Workbench: [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
 
-### Create the database:
-
-1. Open **MySQL Workbench**
-2. Run the script inside `sql/create_db.sql`
-
-```sql
-CREATE DATABASE IF NOT EXISTS flaskdb;
-USE flaskdb;
-
-CREATE TABLE tbl_user (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
-);
-```
+Git Bash is optional but recommended.
 
 ---
 
-## 6️⃣ Create Your `.env` File
+3️⃣ **Run the app**
 
-Inside the project folder, create a file named **.env**
-
-Copy this inside it:
-
-```
-SECRET_KEY=mysupersecretkey
-MYSQL_HOST=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=YOUR_MYSQL_PASSWORD
-MYSQL_DB=flaskdb
-```
-
-Replace:
-
-* `YOUR_MYSQL_PASSWORD` → with your real MySQL password
-
----
-
-## 7️⃣ Run the Application
-
-Inside Git Bash (with virtual env activated):
+Open Git Bash or Command Prompt in the project folder:
 
 ```bash
 python app.py
 ```
 
-Open your browser and visit:
+---
+
+4️⃣ **Open your browser**
+
+Go to:
 
 ```
 http://127.0.0.1:5000
 ```
 
-You can now use the homepage and the signup page!
+Your homepage and signup page will load automatically.
 
 ---
+
+✅ **Done!** No extra setup needed — everything is ready to run.
+
+
 
 # 📄 Explanation of Each File
 
@@ -226,26 +207,6 @@ By doing this project, you will understand:
 This covers the foundation of backend development with Flask.
 
 ---
-
-# 📘 Next Learning Steps (Optional Improvements)
-
-Students can extend this project by:
-
-* Adding login functionality
-* Creating a dashboard page
-* Validating form inputs properly
-* Showing a list of all users
-* Adding CSS styling
-* Adding logout functionality
-* Adding flash messages (already included in example)
-
----
-
-# 🙌 Final Notes
-
-This README is intentionally simple so beginners can follow it without confusion.
-
-Happy coding! 🎉
 
 ```
 
