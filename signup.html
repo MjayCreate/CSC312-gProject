@@ -55,62 +55,63 @@
 </head>
 
 <body>
-    <div class="center">
-        <form class="needs-validation" novalidate>
+  <div class="center">
+    <form class="needs-validation" novalidate>
 
-   <div>
-    <label for="Username" class="form-label visually-hidden">Username</label>
-    <div class="input-group has-validation mb-3">
-      <span class="input input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="input form-control" id="Username" aria-describedby="inputGroupPrepend"   pattern="^[A-Za-z][A-Za-z0-9_]{2,15}$" minlength="3" maxlength="16" placeholder="Username">
-      <div class="invalid-feedback">
-        Only letters, digits, and underscore allowed.
+      <div>
+        <label for="Username" class="form-label visually-hidden">Username</label>
+        <div class="input-group has-validation mb-3">
+          <span class="input input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="input form-control" id="Username" aria-describedby="inputGroupPrepend"   pattern="^[A-Za-z][A-Za-z0-9_]{2,15}$" minlength="3" maxlength="16" placeholder="Username">
+          <div class="invalid-feedback">
+            Only letters, digits, and underscore allowed.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
   
-  <div>
-    <label for="pword" class="form-label visually-hidden">Password</label>
-    <input type="password" minlength= "8" class="input form-control mb-2" id="pword" placeholder="Password" 
-    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-    required>
-    <div class="invalid-feedback">
-        8 characters: uppercase, lowercase, number, and a special character.
+      <div>
+        <label for="pword" class="form-label visually-hidden">Password</label>
+        <input type="password" minlength= "8" class="input form-control mb-2" id="pword" placeholder="Password" 
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        required>
+        <div class="invalid-feedback">
+            8 characters: uppercase, lowercase, number, and a special character.
+          </div>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
       </div>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
 
-  <div>
-    <button class="mt-5 btn button" type="submit">Sign Up</button>
+      <div>
+        <button class="mt-5 btn button" type="submit">Sign Up</button>
+      </div>
+      
+    </form>
   </div>
-</form>
-    </div>
     
 
-<script>
-    (function () {
-  'use strict'
+  <script>
+      (function () {
+    'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+  </script>
 
 </body>
 </html>
